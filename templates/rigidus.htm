@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=windows-1251" />
+	<title> {head_title} </title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/style.v26.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/milkbox.v1.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/calendar.v1.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/dashboard.v1.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/colorize.css" />
+
+    <script>
+    function ShowHide(id)
+    {
+     	if (document.getElementById(id).style.display == 'none') {
+     		document.getElementById(id).style.display = 'block';
+     	} else {
+     		document.getElementById(id).style.display = 'none';
+     	}
+     	return false;
+    }
+    </script>
+  </head>
+  <body>
+
+	<div id="tb_c" style="background-color: #000000;">
+	  <div id="b1" style="display: inline; width: 930px; height: 90px; padding: 0px;">
+		&nbsp;
+	  </div>
+	</div>
+
+	<div id="top-row">
+      <table class="layout">
+        <tr>
+          <td id="main-menu">
+
+            <div id="logo">
+			  <a href="/">
+				<img src="http://www.gravatar.com/avatar.php?gravatar_id=d8a986606b9d5e4769ba062779e95d9f&default=http%3A%2F%2Fwww.somewhere.com%2Fhomestar.jpg&size=50" style="border: 3px solid #AfAfAf" />
+			  </a>
+			</div>
+            <ul id="main-menu-c" >
+			  <div style="position:relative; top: 25px;">
+              <li id="main-menu-photographer" class="main-menu-row">
+				<nobr>{BreadCrumbs}</nobr>
+              </li>
+			  </div>
+            </ul>
+          </td>
+          <td id="auth">
+            <form method="post">
+              <table id="auth-content">
+                <tr>
+				  <!-- BEGIN logon -->
+                  <td class="cell_register"><a href="/newuser">Регистрация</a></td>
+                  <td class="cell_lostpass"><a class="light" href="/lostpassword">Забыли пароль?</a></td>
+                  <td class="cell_field">
+					<input id="auth_login" class="empty" name="login" type="text" value="" /></td>
+                  <td class="cell_field">
+					<input id="auth_pass" class="empty" name="password" type="password" value="" />
+				  </td>
+                  <td class="cell_button">
+					<input class="button" id="auth_submit" type="submit" value="Войти" />
+				  </td>
+				  <!-- END logon -->
+				  <!-- BEGIN logout -->
+				  <td class="cell_button" align="right">
+					<div style="margin-left: 350px">
+					  <input type="hidden" name="act" value="logout" />
+					  <input type="submit" value="Выход"  style="border: 1px solid #AAAAAA;" />
+					</div>
+				  </td>
+				  <!-- END logout -->
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+	</div>
+
+	<div id="content">
+	  <!-- BEGIN ContentBlock -->
+
+	  <div id="forum_content">
+		<table class="content" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td class="right" style="vertical-align: top;">
+
+			  <table  cellspacing="0" cellpadding="0">
+				<tr>
+				  <td class="right" id="forum_right">
+					<div class="aligned">
+					  <div class="forum_topic_text">
+						<div class="p" style="font-size: 14px;">
+						  <h1>{title} </h1>
+						  <br />
+						  {content}
+						</div>
+					  </div>
+					</div>
+				  </td>
+				</tr>
+			  </table>
+
+			</td>
+
+
+			<td class="left">
+			  <div class="forum_header" style="margin-top: 20px;">Ссылки</div>
+
+			  <div class="forum_row">
+				<a href="http://izverg.ru">Ролевое и историческое фехтование</a>
+			  </div>
+			  <div class="forum_row">
+				{my_links}
+			  </div>
+			</td>
+		  </tr>
+		</table>
+	  </div>
+	  <!-- END ContentBlock -->
+
+
+	</div>
+
+	<div id="pagination">
+	</div>
+	<div id="footer">
+	  <div style="width: 930px; margin-bottom: 12px;"></div>&copy; Rigidus 2010<br />
+	  <a href="/contacts">Обратная связь</a> &nbsp;&nbsp;&nbsp;
+	  <a href="/rss">RSS</a> &nbsp;&nbsp;&nbsp;
+	  <a href="/about">About</a> &nbsp;&nbsp;&nbsp;
+	  <a href="/sitemap">Карта сайта</a> &nbsp;&nbsp;&nbsp;
+	</div>
+	<div id="yd_c">
+	  <div id="yd">
+	  </div>
+	</div>
+  </body>
+</html>

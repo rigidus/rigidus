@@ -1,0 +1,194 @@
+/* Calendar: a Javascript class for Mootools that adds accessible and unobtrusive date pickers to your form elements <http://electricprism.com/aeron/calendar> */
+/* Dashboard CSS for Calendar (navigation: 1), Copyright (c) 2007 Aeron Glemann <http://electricprism.com/aeron> */
+
+
+.hidden {
+	opacity: 0;
+	position: absolute;
+}
+.visible {
+	opacity: 1;
+}
+
+/*
+input.dashboard,
+select.dashboard {
+	width: 149px;
+}
+*/
+
+button.dashboard {
+	background: url(/images/dashboard-icon.gif);
+	border: 0;
+	cursor: pointer;
+	height: 20px;
+	margin: 0 0 0 -32px;
+	width: 20px;
+	vertical-align: top;
+}
+button.dashboard:hover,
+button.dashboard.active {
+	background-position: 0 20px;
+}
+.field button.dashboard {
+    margin: -1px 0 0 0;
+    cursor: pointer;
+}
+div.dashboard {
+	background: url(/images/dashboard.png) no-repeat;
+	height: 175px;
+	padding: 0 12px;
+	text-align: center;
+	width: 200px;
+}	
+
+div.dashboard.not-time {
+	background-position:0 -175px;
+	height: 175px;
+	padding: 0 12px;
+	text-align: center;
+	width: 200px;
+}
+
+
+div.dashboard * {
+	margin: 0;
+	padding: 0;
+}	
+div.dashboard div.calendar {
+	background: none !important;
+	height: 165px;
+	overflow: hidden;
+	padding-top: 10px;
+	position: relative;
+	width: 147px;
+	float: left;
+}
+
+div.dashboard caption {
+	color: #a7fb83;
+	font: normal 12px/17px Arial, Helvetica, sans-serif;
+	padding-top: 4px;
+	text-align: center;
+	width: 100%;
+}
+div.dashboard caption a {
+	cursor: pointer;
+	display: inline-block;
+	height: 11px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-indent: -100px;
+	top: 16px;
+	width: 11px;
+}
+div.dashboard caption a.prev {
+	background-image: url(/images/dashboard-prev.gif);
+	left: 1px;
+}
+div.dashboard caption a.next {
+	background-image: url(/images/dashboard-next.gif);
+	right: 1px;
+}
+div.dashboard caption a:hover {
+	background-position: 0 11px;
+}
+div.dashboard caption span {
+	height: 25px;
+	position: relative;
+	text-align: center;
+}
+div.dashboard caption span.month {
+	padding-right: 8px;
+}
+
+/*
+div.dashboard caption span.month:after {
+	content: ',';
+}
+*/
+div.dashboard table {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	cursor: default;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 147px;
+}
+div.dashboard td,
+div.dashboard th {
+	border: 0;
+	color: #999;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	height: 19px;
+	text-align: center;
+	width: 21px;
+}
+div.dashboard td {
+	color: #333;
+	font-size: 11px;
+	padding-right: 5px;
+	text-align: right;
+	width: 16px;
+}
+div.dashboard td.invalid {
+	color: #666;
+}
+div.dashboard td.valid {
+	color: #FFF;
+	cursor: pointer;
+}
+div.dashboard td.active,
+div.dashboard td.hover {
+	color: #a7fb83;
+	cursor: pointer;
+}
+
+div.dashboard div.slider-wrap
+{
+	padding-top:14px;
+	margin-left:3px;
+	float: left;
+	width:18px;
+
+}
+
+div.dashboard div.slider-wrap .value
+{
+	text-align: center;
+	vertical-align: middle;
+	width:16px;
+	color:white;
+	font-size: 11px;
+	line-height:17px;
+	padding-bottom:2px;
+}
+
+
+div.dashboard div.slider
+{
+	height: 130px;
+	width:16px;
+	margin:0;
+	padding:0;
+	display: block;
+}
+
+
+
+div.dashboard div.slider-wrap div.slider a.knob
+{
+	background-image: url('/images/handle.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height: 16px;
+	margin:0;
+	padding:0;
+	display: block;
+}
+
+div.dashboard div.active div.slider a.knob
+{
+	background-position: 0 -16px;
+}
